@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 
 public class ConsumablesAndCharmsItemGroup extends ItemGroup
 {
-    public static final ItemGroup MAIN = new ConsumablesAndCharmsItemGroup("consumablesandcharms", () -> new ItemStack(ConsumablesAndCharmsItems.candycicle));
+    public static final ItemGroup MAIN = new ConsumablesAndCharmsItemGroup("consumablesandcharms", () -> new ItemStack(ConsumablesAndCharmsItems.CANDYCICLE));
     
     private final Supplier<ItemStack> icon;
     
