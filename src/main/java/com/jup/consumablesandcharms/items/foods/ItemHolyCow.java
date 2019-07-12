@@ -38,7 +38,7 @@ public class ItemHolyCow extends ItemFoodBase
                     }
                     else if(getTier(stack) > 1 && !listEntity.world.isRemote())
                     {
-                        listEntity.attackEntityFrom(DamageSource.LIGHTNING_BOLT, 5.0F * nbt.getInt("Tier"));
+                        listEntity.attackEntityFrom(DamageSource.LIGHTNING_BOLT, 5.0F * getTier(stack));
                     }
                 }
             }
