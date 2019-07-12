@@ -22,32 +22,18 @@ public class ItemFoodBase extends Item {
     
     public static int getTier(ItemStack stack)
     {
-        if(!stack.getOrCreateTag().contains("Tier"))
+        if(stack.hasTag() && stack.getTag().contains("Tier"))
         {
-            stack.getTag().putInt("Tier", 1);
-        }
-    
-        return stack.getTag().getInt("Tier");
+            return stack.getTag().getInt("Tier");
+        } else return 1;
     }
-    
-    @Override
-    public void onCreated(ItemStack stack, World worldIn, PlayerEntity playerIn) {
-        stack.getOrCreateTag().putInt("Tier", 1);
-        
-        super.onCreated(stack, worldIn, playerIn);
-    }
-    
-    
     
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
     {
-        if (stack.hasTag() && stack.getTag().contains("Tier"))
-        {
-            ITextComponent message = new StringTextComponent("item.tier" + stack.getTag().getInt("Tier"));
-            message.getStyle().setColor(TextFormatting.GOLD);
-            tooltip.add(message);
-        }
+        ITextComponent message = new StringTextComponent("Tier " + getTier(stack));
+        message.getStyle().setColor(TextFormatting.GOLD);
+        tooltip.add(message);
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
 }
