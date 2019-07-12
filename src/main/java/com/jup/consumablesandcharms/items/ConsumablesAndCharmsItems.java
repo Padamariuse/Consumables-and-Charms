@@ -14,16 +14,16 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 public class ConsumablesAndCharmsItems
 {
-    public static Item candycicle;
-    public static Item holyCow;
+    public static Item CANDYCICLE;
+    public static Item HOLY_COW;
     
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
         IForgeRegistry<Item> registry = event.getRegistry();
         
-        registry.register(candycicle = new ItemCandycicle(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.candycicle)).setRegistryName(location("candycicle")));
-        registry.register(holyCow = new ItemHolyCow(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.holyCow)).setRegistryName(location("holy_cow")));
+        registry.register(CANDYCICLE = new ItemCandycicle(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.candycicle)).setRegistryName(location("candycicle")));
+        registry.register(HOLY_COW = new ItemHolyCow(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.holyCow)).setRegistryName(location("holy_cow")));
     }
     
     private static ResourceLocation location(String name)
