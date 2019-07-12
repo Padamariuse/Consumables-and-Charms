@@ -36,4 +36,5 @@ public class ItemFoodBase extends Item {
         tooltip.add(message);
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
+    
 }
