@@ -16,7 +16,6 @@ public class ConsumablesAndCharmsItems
 {
     public static Item candycicle;
     public static Item holyCow;
-    public static Food carot;
     
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
