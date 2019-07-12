@@ -1,5 +1,6 @@
 package com.jup.consumablesandcharms;
 
+import com.jup.consumablesandcharms.blocks.ConsumablesAndCharmsBlocks;
 import com.jup.consumablesandcharms.items.ConsumablesAndCharmsItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -68,14 +69,15 @@ public class ConsumablesAndCharms
     @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
-        public static void onItemRegistry(final RegistryEvent.Register<Item> event)
+        public static void onBlocksRegistry(final RegistryEvent.Register<Block> event)
         {
-            ConsumablesAndCharmsItems.registerItems(event);
+            ConsumablesAndCharmsBlocks.registerBlocks(event.getRegistry());
         }
         
         @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
+        public static void onItemRegistry(final RegistryEvent.Register<Item> event)
         {
+            ConsumablesAndCharmsItems.registerItems(event);
         }
     }
 }
