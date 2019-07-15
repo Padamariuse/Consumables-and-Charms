@@ -16,7 +16,7 @@ import net.minecraftforge.common.ToolType;
 
 public class BlockArcanokitchen extends Block
 {
-    protected static final VoxelShape SHAPE = VoxelShapes.or(Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16D, 9/16D, 16D), Block.makeCuboidShape(7.0D, 0.0D, 7.0D, 9.0D, 14.0D, 9.0D));
+    protected static final VoxelShape SHAPE = VoxelShapes.or(Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 15.0D, 16.0D));
     public BlockArcanokitchen()
     {
         super(Properties.create(Material.ROCK).hardnessAndResistance(3).sound(SoundType.STONE));
@@ -32,7 +32,8 @@ public class BlockArcanokitchen extends Block
         return SHAPE;
     }
     
-    public BlockRenderLayer getRenderLayer() {
-        return BlockRenderLayer.CUTOUT;
+    @Override
+    public BlockRenderType getRenderType(BlockState state) {
+        return BlockRenderType.MODEL;
     }
 }

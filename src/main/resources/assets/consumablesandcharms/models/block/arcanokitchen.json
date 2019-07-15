@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "blocks/stone",
-		"1": "blocks/gold_block",
-		"2": "blocks/ice",
-		"particle": "blocks/stone"
+		"0": "block/stone",
+		"1": "block/gold_block",
+		"2": "block/ice",
+		"particle": "block/stone"
 	},
 	"elements": [
 		{
