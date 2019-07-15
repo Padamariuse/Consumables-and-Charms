@@ -2,6 +2,7 @@ package com.jup.consumablesandcharms.items;
 
 import com.jup.consumablesandcharms.ConsumablesAndCharms;
 import com.jup.consumablesandcharms.items.foods.ItemCandycicle;
+import com.jup.consumablesandcharms.items.foods.ItemGunpowderGanacheCake;
 import com.jup.consumablesandcharms.items.foods.ItemHolyCow;
 import net.minecraft.block.Block;
 import net.minecraft.item.*;
@@ -16,6 +17,7 @@ public class ConsumablesAndCharmsItems
 {
     public static Item CANDYCICLE;
     public static Item HOLY_COW;
+    public static Item GUNPOWDER_GANACHE_CAKE;
     
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
@@ -25,6 +27,7 @@ public class ConsumablesAndCharmsItems
         registerBlockItem(registry, new BlockItem(ARCANOKITCHEN, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)));
         registry.register(CANDYCICLE = new ItemCandycicle(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.candycicle)).setRegistryName(location("candycicle")));
         registry.register(HOLY_COW = new ItemHolyCow(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.holyCow)).setRegistryName(location("holy_cow")));
+        registry.register(GUNPOWDER_GANACHE_CAKE = new ItemGunpowderGanacheCake(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.gunpowderGanacheCake)).setRegistryName(location("gunpowder_ganache_cake")));
     }
     
     private static Item registerBlockItem(IForgeRegistry<Item> registry, BlockItem item)
