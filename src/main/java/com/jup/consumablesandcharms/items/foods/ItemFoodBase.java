@@ -28,6 +28,14 @@ public class ItemFoodBase extends Item {
         } else return 1;
     }
     
+    public static String getModifier(ItemStack stack)
+    {
+        if(stack.hasTag() && stack.getTag().contains("Modifier"))
+        {
+            return stack.getTag().getString("Modifier");
+        } else return "None";
+    }
+    
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
     {
