@@ -27,7 +27,8 @@ public class ItemCandycicle extends ItemFoodBase
     }
     
     @Override
-    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity e) {
+    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity e)
+    {
         if(e instanceof PlayerEntity)
         {
             List<Entity> entities = e.world.getEntitiesWithinAABBExcludingEntity(e, e.getBoundingBox().expand(10.0D, 10.0D, -10.0D).offset(-5, -5, 5));
