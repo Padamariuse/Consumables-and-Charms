@@ -16,7 +16,7 @@ public class RocketColaItem extends FoodBaseItem
     public ItemStack onItemUseFinish(ItemStack i, World w, LivingEntity e)
     {
         Vec3d vec = e.getLookVec().normalize();
-        double f = getTier(i) * .75;
+        double f = getTier(i) * 0.5;
         
         e.addVelocity(vec.x * f, vec.y * f, vec.z * f);
         return super.onItemUseFinish(i, w, e);
