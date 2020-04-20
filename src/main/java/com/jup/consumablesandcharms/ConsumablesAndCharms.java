@@ -2,9 +2,11 @@ package com.jup.consumablesandcharms;
 
 import com.jup.consumablesandcharms.blocks.ConsumablesAndCharmsBlocks;
 import com.jup.consumablesandcharms.items.ConsumablesAndCharmsItems;
+import com.jup.consumablesandcharms.potions.ConsumablesAndCharmsEffects;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.potion.Effect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -78,6 +80,12 @@ public class ConsumablesAndCharms
         public static void onItemRegistry(final RegistryEvent.Register<Item> event)
         {
             ConsumablesAndCharmsItems.registerItems(event);
+        }
+    
+        @SubscribeEvent
+        public static void onPotionRegistry(final RegistryEvent.Register<Effect> event)
+        {
+            ConsumablesAndCharmsEffects.registerEffects(event);
         }
     }
 }
