@@ -1,24 +1,17 @@
 package com.jup.consumablesandcharms.items.foods;
 
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.LightningBoltEntity;
-import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.particles.BlockParticleData;
-import net.minecraft.particles.ParticleTypes;
-import net.minecraft.potion.EffectInstance;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
 import java.util.List;
 
-public class ItemHolyCow extends ItemFoodBase
+public class HolyCowItem extends FoodBaseItem
 {
-    public ItemHolyCow(Properties properties) {
+    public HolyCowItem(Properties properties) {
         super(properties);
     }
     

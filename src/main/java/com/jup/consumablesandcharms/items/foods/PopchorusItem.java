@@ -7,9 +7,9 @@ import net.minecraft.world.World;
 
 import static net.minecraft.potion.Effects.LEVITATION;
 
-public class ItemPopchorus extends ItemFoodBase
+public class PopchorusItem extends FoodBaseItem
 {
-    public ItemPopchorus(Properties properties)
+    public PopchorusItem(Properties properties)
     {
         super(properties);
     }

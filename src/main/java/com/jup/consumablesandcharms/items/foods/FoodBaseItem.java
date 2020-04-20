@@ -14,9 +14,9 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ItemFoodBase extends Item {
+public class FoodBaseItem extends Item {
     CompoundNBT nbt;
-    public ItemFoodBase(Properties properties) {
+    public FoodBaseItem(Properties properties) {
         super(properties);
     }
     

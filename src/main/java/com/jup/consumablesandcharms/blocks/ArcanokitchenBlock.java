@@ -16,10 +16,10 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 
-public class BlockArcanokitchen extends Block
+public class ArcanokitchenBlock extends Block
 {
     protected static final VoxelShape SHAPE = VoxelShapes.or(Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 15.0D, 16.0D));
-    public BlockArcanokitchen()
+    public ArcanokitchenBlock()
     {
         super(Properties.create(Material.ROCK).hardnessAndResistance(3).sound(SoundType.STONE));
     }

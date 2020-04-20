@@ -1,13 +1,9 @@
 package com.jup.consumablesandcharms.items.foods;
 
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.client.particle.Particle;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particles.BlockParticleData;
 import net.minecraft.particles.ParticleTypes;
@@ -19,9 +15,9 @@ import java.util.List;
 import static net.minecraft.potion.Effects.SLOWNESS;
 import static net.minecraft.util.SoundEvents.BLOCK_GLASS_BREAK;
 
-public class ItemCandycicle extends ItemFoodBase
+public class CandycicleItem extends FoodBaseItem
 {
-    public ItemCandycicle(Properties properties)
+    public CandycicleItem(Properties properties)
     {
         super(properties);
     }
