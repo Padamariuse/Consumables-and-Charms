@@ -18,6 +18,7 @@ public class ConsumablesAndCharmsItems
     public static Item HOLY_COW;
     public static Item GUNPOWDER_GANACHE_CAKE;
     public static Item POPCHORUS;
+    public static Item ROCKET_COLA;
     
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
@@ -29,6 +30,7 @@ public class ConsumablesAndCharmsItems
         registry.register(HOLY_COW = new HolyCowItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.holyCow)).setRegistryName(location("holy_cow")));
         registry.register(GUNPOWDER_GANACHE_CAKE = new GunpowderGanacheCakeItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.gunpowderGanacheCake)).setRegistryName(location("gunpowder_ganache_cake")));
         registry.register(POPCHORUS = new PopchorusItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.popchorus)).setRegistryName(location("popchorus")));
+        registry.register(ROCKET_COLA = new RocketColaItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.rocketCola)).setRegistryName(location("rocket_cola")));
     }
     
     private static Item registerBlockItem(IForgeRegistry<Item> registry, BlockItem item)
