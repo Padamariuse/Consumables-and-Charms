@@ -25,7 +25,7 @@ public class EnderDistortionEffect extends Effect
     {
         LivingEntity affected = event.getEntityLiving();
         EffectInstance potion = affected.getActivePotionEffect(ConsumablesAndCharmsEffects.ENDER_DISTORTION);
-        if(affected.isPotionActive(ConsumablesAndCharmsEffects.ENDER_DISTORTION) && affected.getRNG().nextFloat() < 0.02 * (potion.getAmplifier() + 1))
+        if(affected.isPotionActive(ConsumablesAndCharmsEffects.ENDER_DISTORTION) && affected.getRNG().nextFloat() < 0.01 * (potion.getAmplifier() + 1))
         {
             Random rand = new Random();
             double d0 = affected.posX + (rand.nextDouble() - 0.5D) * 16.0D;

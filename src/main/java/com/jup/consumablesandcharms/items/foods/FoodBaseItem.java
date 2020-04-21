@@ -8,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
@@ -15,8 +16,8 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class FoodBaseItem extends Item {
-    CompoundNBT nbt;
-    public FoodBaseItem(Properties properties) {
+    public FoodBaseItem(Properties properties)
+    {
         super(properties);
     }
     
@@ -39,8 +40,22 @@ public class FoodBaseItem extends Item {
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
     {
-        ITextComponent message = new StringTextComponent("Tier " + getTier(stack));
-        message.getStyle().setColor(TextFormatting.GOLD);
+        int tier = getTier(stack);
+        
+        ITextComponent message = new StringTextComponent("Tier " + tier);
+        Style s = message.getStyle();
+        
+        if(tier >= 15)
+        {
+            s.setColor(TextFormatting.RED);
+        } else if(tier >= 10)
+        {
+            s.setColor(TextFormatting.GOLD);
+        } else if(tier >= 5)
+        {
+            s.setColor(TextFormatting.YELLOW);
+        }
+        
         tooltip.add(message);
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }

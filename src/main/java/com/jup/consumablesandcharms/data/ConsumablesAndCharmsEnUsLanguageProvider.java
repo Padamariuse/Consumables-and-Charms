@@ -23,10 +23,12 @@ public class ConsumablesAndCharmsEnUsLanguageProvider extends ConsumablesAndChar
         add(ConsumablesAndCharmsItems.GUNPOWDER_GANACHE_CAKE, "Gunpowder Ganache Cake");
         add(ConsumablesAndCharmsItems.POPCHORUS, "Popchorus");
         add(ConsumablesAndCharmsItems.ROCKET_COLA, "Rocket Cola");
+        add(ConsumablesAndCharmsItems.SOUP_OF_SINKING, "Soup of Sinking");
         
         add(ConsumablesAndCharmsBlocks.ARCANOKITCHEN, "Arcanokitchen");
         
         add(ConsumablesAndCharmsEffects.ENDER_DISTORTION, "Ender Distortion");
+        add(ConsumablesAndCharmsEffects.SHOCKWAVE, "Shockwave");
     
         add(ConsumablesAndCharmsItemGroup.MAIN, "Consumables and Charms");
     }
