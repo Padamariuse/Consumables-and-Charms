@@ -32,7 +32,7 @@ public class GiveEffectItem extends FoodBaseItem
         if(tieredDuration)
             duration = duration * getTier(stack);
         if(tieredAmplifier)
-            amplifier = getTier(stack);
+            amplifier = getTier(stack) - 1;
         
         if(!world.isRemote)
             entity.addPotionEffect(new EffectInstance(effect.get(), duration, amplifier));
