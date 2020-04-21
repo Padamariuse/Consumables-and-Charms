@@ -6,7 +6,6 @@ import com.jup.consumablesandcharms.items.ConsumablesAndCharmsItemGroup;
 import com.jup.consumablesandcharms.items.ConsumablesAndCharmsItems;
 import com.jup.consumablesandcharms.potions.ConsumablesAndCharmsEffects;
 import net.minecraft.data.DataGenerator;
-import net.minecraftforge.common.data.LanguageProvider;
 
 public class ConsumablesAndCharmsEnUsLanguageProvider extends ConsumablesAndCharmsLanguageProvider
 {
@@ -23,7 +22,8 @@ public class ConsumablesAndCharmsEnUsLanguageProvider extends ConsumablesAndChar
         add(ConsumablesAndCharmsItems.GUNPOWDER_GANACHE_CAKE, "Gunpowder Ganache Cake");
         add(ConsumablesAndCharmsItems.POPCHORUS, "Popchorus");
         add(ConsumablesAndCharmsItems.ROCKET_COLA, "Rocket Cola");
-        add(ConsumablesAndCharmsItems.SOUP_OF_SINKING, "Soup of Sinking");
+        add(ConsumablesAndCharmsItems.SOUP_OF_SINKING, "Soup of Sinking");;
+        add(ConsumablesAndCharmsItems.HARDENED_OATMEAL_COOKIE, "Hardened Oatmeal Cookie");
         
         add(ConsumablesAndCharmsBlocks.ARCANOKITCHEN, "Arcanokitchen");
         

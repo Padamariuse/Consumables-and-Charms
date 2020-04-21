@@ -4,6 +4,7 @@ import com.jup.consumablesandcharms.ConsumablesAndCharms;
 import com.jup.consumablesandcharms.items.foods.*;
 import com.jup.consumablesandcharms.items.foods.CandycicleItem;
 import com.jup.consumablesandcharms.items.foods.PopchorusItem;
+import com.jup.consumablesandcharms.potions.ConsumablesAndCharmsEffects;
 import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
@@ -20,6 +21,7 @@ public class ConsumablesAndCharmsItems
     public static Item POPCHORUS;
     public static Item ROCKET_COLA;
     public static Item SOUP_OF_SINKING;
+    public static Item HARDENED_OATMEAL_COOKIE;
     
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
@@ -33,6 +35,7 @@ public class ConsumablesAndCharmsItems
         registry.register(POPCHORUS = new PopchorusItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.POPCHORUS)).setRegistryName(location("popchorus")));
         registry.register(ROCKET_COLA = new RocketColaItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.ROCKET_COLA)).setRegistryName(location("rocket_cola")));
         registry.register(SOUP_OF_SINKING = new SoupOfSinkingItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.SOUP_OF_SINKING)).setRegistryName(location("soup_of_sinking")));
+        registry.register(HARDENED_OATMEAL_COOKIE = new GiveEffectItem(() -> ConsumablesAndCharmsEffects.SHOCKWAVE, 100, 0, false, true, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.HARDENED_OATMEAL_COOKIE)).setRegistryName(location("hardened_oatmeal_cookie")));
     }
     
     private static Item registerBlockItem(IForgeRegistry<Item> registry, BlockItem item)

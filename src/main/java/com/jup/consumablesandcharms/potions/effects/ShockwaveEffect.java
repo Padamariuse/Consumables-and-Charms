@@ -40,7 +40,7 @@ public class ShockwaveEffect extends Effect
                 if(listEntity instanceof LivingEntity)
                 {
                     listEntity.attackEntityFrom(DamageSource.GENERIC, 3 + (2 * potion.getAmplifier()));
-                    listEntity.addVelocity(0, 1.5 * (potion.getAmplifier() + 1) / 2, 0);
+                    listEntity.addVelocity(0, 1.5 * (potion.getAmplifier() + 1) / 5, 0);
                 }
             }
         }
