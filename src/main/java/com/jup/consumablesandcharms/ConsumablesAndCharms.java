@@ -1,17 +1,15 @@
 package com.jup.consumablesandcharms;
 
 import com.jup.consumablesandcharms.blocks.ConsumablesAndCharmsBlocks;
+import com.jup.consumablesandcharms.proxy.ClientProxy;
 import com.jup.consumablesandcharms.items.ConsumablesAndCharmsItems;
 import com.jup.consumablesandcharms.potions.ConsumablesAndCharmsEffects;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Effect;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -21,8 +19,6 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ConsumablesAndCharms.MOD_ID)
@@ -48,9 +44,9 @@ public class ConsumablesAndCharms
     {
     }
 
-    private void doClientStuff(final FMLClientSetupEvent event) {
-        // do something that can only be done on the client
-        LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+    private void doClientStuff(final FMLClientSetupEvent event)
+    {
+        ClientProxy.init();
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

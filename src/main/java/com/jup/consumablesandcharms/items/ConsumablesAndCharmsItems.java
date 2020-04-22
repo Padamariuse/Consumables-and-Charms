@@ -22,6 +22,7 @@ public class ConsumablesAndCharmsItems
     public static Item ROCKET_COLA;
     public static Item SOUP_OF_SINKING;
     public static Item HARDENED_OATMEAL_COOKIE;
+    public static Item MATRON_MOTHER_MEATBALL;
     
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
@@ -29,6 +30,7 @@ public class ConsumablesAndCharmsItems
         IForgeRegistry<Item> registry = event.getRegistry();
         
         registerBlockItem(registry, new BlockItem(ARCANOKITCHEN, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)));
+        
         registry.register(CANDYCICLE = new CandycicleItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.CANDYCICLE)).setRegistryName(location("candycicle")));
         registry.register(HOLY_COW = new HolyCowItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.HOLY_COW)).setRegistryName(location("holy_cow")));
         registry.register(GUNPOWDER_GANACHE_CAKE = new GunpowderGanacheCakeItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.GUNPOWDER_GANACHE_CAKE)).setRegistryName(location("gunpowder_ganache_cake")));
@@ -36,6 +38,7 @@ public class ConsumablesAndCharmsItems
         registry.register(ROCKET_COLA = new RocketColaItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.ROCKET_COLA)).setRegistryName(location("rocket_cola")));
         registry.register(SOUP_OF_SINKING = new SoupOfSinkingItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.SOUP_OF_SINKING)).setRegistryName(location("soup_of_sinking")));
         registry.register(HARDENED_OATMEAL_COOKIE = new GiveEffectItem(() -> ConsumablesAndCharmsEffects.SHOCKWAVE, 100, 0, false, true, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.HARDENED_OATMEAL_COOKIE)).setRegistryName(location("hardened_oatmeal_cookie")));
+        registry.register(MATRON_MOTHER_MEATBALL = new MatronMotherMeatballItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("matron_mother_meatball")));
     }
     
     private static Item registerBlockItem(IForgeRegistry<Item> registry, BlockItem item)
