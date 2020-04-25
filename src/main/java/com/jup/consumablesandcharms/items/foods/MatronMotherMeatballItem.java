@@ -20,10 +20,13 @@ public class MatronMotherMeatballItem extends FoodBaseItem
     {
         ItemStack item = playerIn.getHeldItem(handIn);
         
-        if(!playerIn.isCreative() && playerIn.canEat(true))
+        if(!playerIn.isCreative() && playerIn.canEat(false))
         {
-            item.shrink(1);
             playerIn.getFoodStats().addStats(3, 0.6F);
+        } else if(playerIn.isCreative()) {}
+        else
+        {
+            return super.onItemRightClick(worldIn, playerIn, handIn);
         }
     
         worldIn.playSound(null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_GENERIC_EAT, SoundCategory.NEUTRAL, 1.0F, 1.0F);
@@ -31,11 +34,12 @@ public class MatronMotherMeatballItem extends FoodBaseItem
         if(!worldIn.isRemote)
         {
             MatronMotherMeatballEntity meatball = new MatronMotherMeatballEntity(ConsumablesAndCharmsEntityTypes.MATRON_MOTHER_MEATBALL, playerIn, worldIn, getTier(playerIn.getHeldItem(handIn)));
-            meatball.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, -20.0F, 0.7F, 1.0F);
+            meatball.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, -20.0F, 1.0F, 0.0F);
             worldIn.addEntity(meatball);
         }
     
+        item.shrink(1);
         playerIn.addStat(Stats.ITEM_USED.get(this));
-        return new ActionResult<>(ActionResultType.SUCCESS, new ItemStack(this));
+        return super.onItemRightClick(worldIn, playerIn, handIn);
     }
 }

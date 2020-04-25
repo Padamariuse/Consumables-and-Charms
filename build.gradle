@@ -74,7 +74,7 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'consumablesandcharms', '--all', '--output', file(' src/main/generated/resources/')
+            args '--mod', 'consumablesandcharms', '--all', '--output', file('src/main/generated/resources')
 
             mods {
                 consumablesandcharms {
@@ -126,6 +126,10 @@ jar {
     }
 }
 
+sourceSets.main.resources {
+    srcDir 'src/main/generated/resources'
+}
+
 // Example configuration to allow publishing using the maven-publish task
 // we define a custom artifact that is sourced from the reobfJar output task
 // and then declare that to be published
@@ -145,8 +149,5 @@ publishing {
         maven {
             url "file:///${project.projectDir}/mcmodsrepo"
         }
-    }
-    sourceSets.main.resources {
-        srcDir 'src/main/generated/resources'
     }
 }

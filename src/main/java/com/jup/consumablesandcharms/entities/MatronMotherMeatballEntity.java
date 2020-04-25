@@ -17,6 +17,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.registries.ObjectHolder;
 
+import java.util.Random;
+
 public class MatronMotherMeatballEntity extends ThrowableEntity implements IRendersAsItem
 {
     private LivingEntity throwerIn;
@@ -41,19 +43,22 @@ public class MatronMotherMeatballEntity extends ThrowableEntity implements IRend
     @Override
     protected float getGravityVelocity()
     {
-        return 0.01F;
+        return 0.05F;
     }
     
     @Override
     protected void onImpact(RayTraceResult result)
     {
-        GhastEntity ghast = new GhastEntity(EntityType.GHAST, world);
         Vec3d vec = result.getHitVec();
-        
-        for(int i = 0; i < 1 + tier; i++)
+        if(!world.isRemote)
         {
-            if(world.isRemote())
-                world.addEntity(ghast);
+            for(int i = 0; i < 1 + tier; i++)
+            {
+                GhastEntity e = new GhastEntity(EntityType.GHAST, world);
+                e.setPosition(vec.x, vec.y + e.getRNG().nextInt(20) + 20, vec.z);
+                
+                world.addEntity(e);
+            }
         }
         
         world.playSound(vec.x, vec.y, vec.z, SoundEvents.BLOCK_SLIME_BLOCK_BREAK, SoundCategory.NEUTRAL, 1.0F, 1.0F, true);
