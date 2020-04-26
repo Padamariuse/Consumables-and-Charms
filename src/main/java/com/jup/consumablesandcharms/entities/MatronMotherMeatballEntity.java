@@ -41,12 +41,6 @@ public class MatronMotherMeatballEntity extends ThrowableEntity implements IRend
     }
     
     @Override
-    protected float getGravityVelocity()
-    {
-        return 0.05F;
-    }
-    
-    @Override
     protected void onImpact(RayTraceResult result)
     {
         Vec3d vec = result.getHitVec();
