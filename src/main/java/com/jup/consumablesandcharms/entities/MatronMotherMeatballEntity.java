@@ -2,9 +2,11 @@ package com.jup.consumablesandcharms.entities;
 
 import com.jup.consumablesandcharms.ConsumablesAndCharms;
 import com.jup.consumablesandcharms.items.ConsumablesAndCharmsItems;
+import com.jup.consumablesandcharms.items.foods.HolyCowItem;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.IRendersAsItem;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.LightningBoltEntity;
 import net.minecraft.entity.monster.GhastEntity;
 import net.minecraft.entity.projectile.ThrowableEntity;
 import net.minecraft.item.ItemStack;
@@ -14,6 +16,7 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -44,6 +47,12 @@ public class MatronMotherMeatballEntity extends ThrowableEntity implements IRend
     protected void onImpact(RayTraceResult result)
     {
         Vec3d vec = result.getHitVec();
+    
+        if(world instanceof ServerWorld)
+        {
+            ((ServerWorld) world).addLightningBolt(new LightningBoltEntity(world, vec.x, vec.y, vec.z, true));
+        }
+        
         if(!world.isRemote)
         {
             for(int i = 0; i < 1 + tier; i++)

@@ -43,7 +43,7 @@ public class HolyCowItem extends FoodBaseItem
         return super.onItemUseFinish(stack, worldIn, entityLiving);
     }
     
-    public void strikeWithLightning(World worldIn, Entity listEntity)
+    public static void strikeWithLightning(World worldIn, Entity listEntity)
     {
         if(worldIn instanceof ServerWorld)
         {
