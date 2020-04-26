@@ -1,6 +1,7 @@
 package com.jup.consumablesandcharms.data;
 
 import com.jup.consumablesandcharms.ConsumablesAndCharms;
+import com.jup.consumablesandcharms.data.recipe.ConsumablesAndCharmsRecipeProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -16,6 +17,7 @@ public class ConsumablesAndCharmsData
         if(e.includeServer())
         {
             gen.addProvider(new ConsumablesAndCharmsEnUsLanguageProvider(gen));
+            gen.addProvider(new ConsumablesAndCharmsRecipeProvider(gen));
         }
     }
 }

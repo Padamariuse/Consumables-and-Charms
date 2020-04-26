@@ -23,7 +23,7 @@ public class MatronMotherMeatballItem extends FoodBaseItem
         
         if(!c && playerIn.canEat(false))
         {
-            playerIn.getFoodStats().addStats(3, 0.6F);
+            playerIn.getFoodStats().addStats(7, 0.6F);
         } else if(c) {}
         else
         {

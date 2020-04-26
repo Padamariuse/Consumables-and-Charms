@@ -1,4 +1,4 @@
-package com.jup.consumablesandcharms.proxy;
+package com.jup.consumablesandcharms.client;
 
 import com.jup.consumablesandcharms.entities.MatronMotherMeatballEntity;
 import net.minecraft.client.Minecraft;

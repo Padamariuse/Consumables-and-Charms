@@ -24,13 +24,25 @@ public class ConsumablesAndCharmsItems
     public static Item HARDENED_OATMEAL_COOKIE;
     public static Item MATRON_MOTHER_MEATBALL;
     
+    public static Item HELL_MEAT; //
+    public static Item FOREST_SALT; //
+    public static Item GLACIER_MINT;
+    public static Item WITCHING_POWDER; //
+    public static Item EARTHEN_FLOUR;
+    public static Item DIVINE_POWER;
+    public static Item STONE_CACAO;
+    public static Item BATED_BREATH;
+    public static Item OTHERWORDLY_RESIDUE; //
+    public static Item SPIRIT_OF_ADVENTURE;
+    
+    public static Item HELL_STEAK;
+    
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
         IForgeRegistry<Item> registry = event.getRegistry();
         
-        registerBlockItem(registry, new BlockItem(ARCANOKITCHEN, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)));
-        
+        //Consumables
         registry.register(CANDYCICLE = new CandycicleItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.CANDYCICLE)).setRegistryName(location("candycicle")));
         registry.register(HOLY_COW = new HolyCowItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.HOLY_COW)).setRegistryName(location("holy_cow")));
         registry.register(GUNPOWDER_GANACHE_CAKE = new GunpowderGanacheCakeItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.GUNPOWDER_GANACHE_CAKE)).setRegistryName(location("gunpowder_ganache_cake")));
@@ -39,6 +51,24 @@ public class ConsumablesAndCharmsItems
         registry.register(SOUP_OF_SINKING = new SoupOfSinkingItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.SOUP_OF_SINKING)).setRegistryName(location("soup_of_sinking")));
         registry.register(HARDENED_OATMEAL_COOKIE = new GiveEffectItem(() -> ConsumablesAndCharmsEffects.SHOCKWAVE, 100, 0, false, true, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.HARDENED_OATMEAL_COOKIE)).setRegistryName(location("hardened_oatmeal_cookie")));
         registry.register(MATRON_MOTHER_MEATBALL = new MatronMotherMeatballItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("matron_mother_meatball")));
+        
+        //Ingredients
+        registry.register(HELL_MEAT = new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("hell_meat")));
+        registry.register(FOREST_SALT = new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("forest_salt")));
+        registry.register(GLACIER_MINT = new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("glacier_mint")));
+        registry.register(WITCHING_POWDER = new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("witching_powder")));
+        registry.register(EARTHEN_FLOUR = new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("earthen_flour")));
+        registry.register(DIVINE_POWER = new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("divine_power")));
+        registry.register(STONE_CACAO = new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("stone_cacao")));
+        registry.register(BATED_BREATH = new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("bated_breath")));
+        registry.register(OTHERWORDLY_RESIDUE = new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("otherwordly_residue")));
+        registry.register(SPIRIT_OF_ADVENTURE = new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.HELL_STEAK)).setRegistryName(location("spirit_of_adventure")));
+        
+        //Food
+        registry.register(HELL_STEAK = new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName("hell_steak"));
+        
+        //Blocks
+        registerBlockItem(registry, new BlockItem(ARCANOKITCHEN, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)));
     }
     
     private static Item registerBlockItem(IForgeRegistry<Item> registry, BlockItem item)

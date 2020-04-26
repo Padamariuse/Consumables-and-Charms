@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "consumablesandcharms:hell_meat"
+  },
+  "result": "consumablesandcharms:hell_steak",
+  "experience": 0.0,
+  "cookingtime": 100
+}

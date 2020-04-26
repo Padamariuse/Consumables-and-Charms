@@ -25,6 +25,17 @@ public class ConsumablesAndCharmsEnUsLanguageProvider extends ConsumablesAndChar
         add(ConsumablesAndCharmsItems.SOUP_OF_SINKING, "Soup of Sinking");;
         add(ConsumablesAndCharmsItems.HARDENED_OATMEAL_COOKIE, "Hardened Oatmeal Cookie");
         add(ConsumablesAndCharmsItems.MATRON_MOTHER_MEATBALL, "Matron Mother Meatball");
+        add(ConsumablesAndCharmsItems.HELL_MEAT, "Hell Meat");
+        add(ConsumablesAndCharmsItems.FOREST_SALT, "Forest Salt");
+        add(ConsumablesAndCharmsItems.GLACIER_MINT, "Glaciermint");
+        add(ConsumablesAndCharmsItems.WITCHING_POWDER, "Witching Powder");
+        add(ConsumablesAndCharmsItems.EARTHEN_FLOUR, "Earthen Flour");
+        add(ConsumablesAndCharmsItems.DIVINE_POWER, "Divine Power");
+        add(ConsumablesAndCharmsItems.STONE_CACAO, "Stone Cacao");
+        add(ConsumablesAndCharmsItems.BATED_BREATH, "Bated Breath");
+        add(ConsumablesAndCharmsItems.OTHERWORDLY_RESIDUE, "Otherwordly Residue");
+        add(ConsumablesAndCharmsItems.SPIRIT_OF_ADVENTURE, "Spirit of Adventure");
+        add(ConsumablesAndCharmsItems.HELL_STEAK, "Hell Steak");
         
         add(ConsumablesAndCharmsBlocks.ARCANOKITCHEN, "Arcanokitchen");
         

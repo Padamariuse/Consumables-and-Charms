@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "consumablesandcharms:forest_salt"
+    },
+    {
+      "item": "consumablesandcharms:forest_salt"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:wheat"
+    }
+  ],
+  "result": {
+    "item": "consumablesandcharms:earthen_flour",
+    "count": 4
+  }
+}
