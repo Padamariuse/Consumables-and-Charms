@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "name": "MAIN",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "consumablesandcharms:spirit_of_adventure"
+        }
+      ]
+    }
+  ]
+}
