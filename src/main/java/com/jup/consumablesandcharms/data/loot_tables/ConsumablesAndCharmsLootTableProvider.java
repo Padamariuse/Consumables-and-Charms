@@ -1,4 +1,4 @@
-package com.jup.consumablesandcharms.data.loot_table;
+package com.jup.consumablesandcharms.data.loot_tables;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;

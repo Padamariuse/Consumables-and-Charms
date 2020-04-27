@@ -2,6 +2,6 @@
   "parent": "item/generated",
   "textures":
   {
-    "layer0": "item/bowl"
+    "layer0": "consumablesandcharms:item/soup_of_sinking"
   }
 }

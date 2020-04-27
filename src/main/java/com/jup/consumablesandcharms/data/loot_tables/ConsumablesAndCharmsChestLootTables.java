@@ -1,4 +1,4 @@
-package com.jup.consumablesandcharms.data.loot_table;
+package com.jup.consumablesandcharms.data.loot_tables;
 
 import com.jup.consumablesandcharms.items.ConsumablesAndCharmsItems;
 import net.minecraft.util.ResourceLocation;

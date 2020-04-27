@@ -1,4 +1,4 @@
-package com.jup.consumablesandcharms.data.recipe;
+package com.jup.consumablesandcharms.data.recipes;
 
 import com.jup.consumablesandcharms.items.ConsumablesAndCharmsItems;
 import net.minecraft.advancements.criterion.InventoryChangeTrigger;

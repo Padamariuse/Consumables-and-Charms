@@ -1,8 +1,8 @@
 package com.jup.consumablesandcharms.data;
 
 import com.jup.consumablesandcharms.ConsumablesAndCharms;
-import com.jup.consumablesandcharms.data.loot_table.ConsumablesAndCharmsLootTableProvider;
-import com.jup.consumablesandcharms.data.recipe.ConsumablesAndCharmsRecipeProvider;
+import com.jup.consumablesandcharms.data.loot_tables.ConsumablesAndCharmsLootTableProvider;
+import com.jup.consumablesandcharms.data.recipes.ConsumablesAndCharmsRecipeProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
