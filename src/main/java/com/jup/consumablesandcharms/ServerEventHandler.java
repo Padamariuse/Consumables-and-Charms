@@ -101,7 +101,6 @@ public class ServerEventHandler
                 event.getName().equals(LootTables.CHESTS_SHIPWRECK_TREASURE))
         {
             event.getTable().addPool(LootPool.builder().addEntry(TableLootEntry.builder(new ResourceLocation(ConsumablesAndCharms.MOD_ID, "chests/vanilla_loot"))).build());
-            System.out.println("if this works i can die peacefully");
         }
     }
 }
