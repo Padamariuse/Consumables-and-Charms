@@ -25,6 +25,7 @@ public class ConsumablesAndCharmsEnUsLanguageProvider extends ConsumablesAndChar
         add(ConsumablesAndCharmsItems.SOUP_OF_SINKING, "Soup of Sinking");;
         add(ConsumablesAndCharmsItems.HARDENED_OATMEAL_COOKIE, "Hardened Oatmeal Cookie");
         add(ConsumablesAndCharmsItems.MATRON_MOTHER_MEATBALL, "Matron Mother Meatball");
+        add(ConsumablesAndCharmsItems.COMFORT_CHILI, "Comfort Chili");
         add(ConsumablesAndCharmsItems.HELL_MEAT, "Hell Meat");
         add(ConsumablesAndCharmsItems.FOREST_SALT, "Forest Salt");
         add(ConsumablesAndCharmsItems.GLACIER_MINT, "Glaciermint");

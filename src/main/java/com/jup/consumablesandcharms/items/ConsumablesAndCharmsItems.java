@@ -23,16 +23,17 @@ public class ConsumablesAndCharmsItems
     public static Item SOUP_OF_SINKING;
     public static Item HARDENED_OATMEAL_COOKIE;
     public static Item MATRON_MOTHER_MEATBALL;
+    public static Item COMFORT_CHILI;
     
-    public static Item HELL_MEAT; //
-    public static Item FOREST_SALT; //
+    public static Item HELL_MEAT;
+    public static Item FOREST_SALT;
     public static Item GLACIER_MINT;
-    public static Item WITCHING_POWDER; //
+    public static Item WITCHING_POWDER;
     public static Item EARTHEN_FLOUR;
     public static Item DIVINE_POWER;
     public static Item STONE_CACAO;
     public static Item BATED_BREATH;
-    public static Item OTHERWORDLY_RESIDUE; //
+    public static Item OTHERWORDLY_RESIDUE;
     public static Item SPIRIT_OF_ADVENTURE;
     
     public static Item HELL_STEAK;
@@ -51,6 +52,7 @@ public class ConsumablesAndCharmsItems
         registry.register(SOUP_OF_SINKING = new SoupOfSinkingItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.SOUP_OF_SINKING)).setRegistryName(location("soup_of_sinking")));
         registry.register(HARDENED_OATMEAL_COOKIE = new GiveEffectItem(() -> ConsumablesAndCharmsEffects.SHOCKWAVE, 100, 0, false, true, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.HARDENED_OATMEAL_COOKIE)).setRegistryName(location("hardened_oatmeal_cookie")));
         registry.register(MATRON_MOTHER_MEATBALL = new MatronMotherMeatballItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("matron_mother_meatball")));
+        registry.register(COMFORT_CHILI = new ComfortChiliItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.COMFORT_CHILI)).setRegistryName(location("comfort_chili")));
         
         //Ingredients
         registry.register(HELL_MEAT = new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("hell_meat")));
