@@ -34,7 +34,7 @@ public class SoaringEffect extends Effect
         Entity e = event.getEntityLiving();
         EffectInstance potion = ((LivingEntity) e).getActivePotionEffect(ConsumablesAndCharmsEffects.SOARING);
         
-        if(((LivingEntity) e).isPotionActive(ConsumablesAndCharmsEffects.SOARING))
+        if(((LivingEntity) e).isPotionActive(ConsumablesAndCharmsEffects.SOARING) && !e.isSneaking())
         {
             Vec3d vec = e.getLookVec().normalize();
             int amp = potion.getAmplifier() + 1;
