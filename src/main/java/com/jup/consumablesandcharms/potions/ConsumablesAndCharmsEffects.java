@@ -11,11 +11,13 @@ public class ConsumablesAndCharmsEffects
 {
     public static final Effect ENDER_DISTORTION = new EnderDistortionEffect().setRegistryName(ConsumablesAndCharms.MOD_ID, "ender_distortion");
     public static final Effect SHOCKWAVE = new ShockwaveEffect().setRegistryName(ConsumablesAndCharms.MOD_ID, "shockwave");
+    public static final Effect SOARING = new ShockwaveEffect().setRegistryName(ConsumablesAndCharms.MOD_ID, "soaring");
     
     @SubscribeEvent
     public static void registerEffects(RegistryEvent.Register<Effect> register)
     {
         register.getRegistry().register(ENDER_DISTORTION);
         register.getRegistry().register(SHOCKWAVE);
+        register.getRegistry().register(SOARING);
     }
 }

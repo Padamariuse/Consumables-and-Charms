@@ -22,10 +22,12 @@ public class ConsumablesAndCharmsEnUsLanguageProvider extends ConsumablesAndChar
         add(ConsumablesAndCharmsItems.GUNPOWDER_GANACHE_CAKE, "Gunpowder Ganache Cake");
         add(ConsumablesAndCharmsItems.POPCHORUS, "Popchorus");
         add(ConsumablesAndCharmsItems.ROCKET_COLA, "Rocket Cola");
+        add(ConsumablesAndCharmsItems.PLANET_COLA, "Planet Cola");
         add(ConsumablesAndCharmsItems.SOUP_OF_SINKING, "Soup of Sinking");;
         add(ConsumablesAndCharmsItems.HARDENED_OATMEAL_COOKIE, "Hardened Oatmeal Cookie");
         add(ConsumablesAndCharmsItems.MATRON_MOTHER_MEATBALL, "Matron Mother Meatball");
         add(ConsumablesAndCharmsItems.COMFORT_CHILI, "Comfort Chili");
+        add(ConsumablesAndCharmsItems.SOARING_STEW, "Soaring Stew");
         add(ConsumablesAndCharmsItems.HELL_MEAT, "Hell Meat");
         add(ConsumablesAndCharmsItems.FOREST_SALT, "Forest Salt");
         add(ConsumablesAndCharmsItems.GLACIER_MINT, "Glaciermint");
@@ -39,9 +41,11 @@ public class ConsumablesAndCharmsEnUsLanguageProvider extends ConsumablesAndChar
         add(ConsumablesAndCharmsItems.HELL_STEAK, "Hell Steak");
         
         add(ConsumablesAndCharmsBlocks.ARCANOKITCHEN, "Arcanokitchen");
+        add(ConsumablesAndCharmsBlocks.MOUNTAIN_CACAO, "Mountain Cacao");
         
         add(ConsumablesAndCharmsEffects.ENDER_DISTORTION, "Ender Distortion");
         add(ConsumablesAndCharmsEffects.SHOCKWAVE, "Shockwave");
+        add(ConsumablesAndCharmsEffects.SOARING, "Soaring");
     
         add(ConsumablesAndCharmsItemGroup.MAIN, "Consumables and Charms");
     }

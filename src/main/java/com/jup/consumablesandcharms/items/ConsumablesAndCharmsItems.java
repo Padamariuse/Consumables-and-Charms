@@ -20,11 +20,13 @@ public class ConsumablesAndCharmsItems
     public static Item GUNPOWDER_GANACHE_CAKE;
     public static Item POPCHORUS;
     public static Item ROCKET_COLA;
+    public static Item PLANET_COLA;
     public static Item SOUP_OF_SINKING;
     public static Item HARDENED_OATMEAL_COOKIE;
     public static Item MATRON_MOTHER_MEATBALL;
     public static Item COMFORT_CHILI;
     public static Item CHORUS_FRUIT_JUICE;
+    public static Item SOARING_STEW;
     
     public static Item HELL_MEAT;
     public static Item FOREST_SALT;
@@ -50,11 +52,13 @@ public class ConsumablesAndCharmsItems
         registry.register(GUNPOWDER_GANACHE_CAKE = new GunpowderGanacheCakeItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.GUNPOWDER_GANACHE_CAKE)).setRegistryName(location("gunpowder_ganache_cake")));
         registry.register(POPCHORUS = new PopchorusItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.POPCHORUS)).setRegistryName(location("popchorus")));
         registry.register(ROCKET_COLA = new RocketColaItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.ROCKET_COLA)).setRegistryName(location("rocket_cola")));
+        registry.register(PLANET_COLA = new PlanetColaItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.PLANET_COLA)).setRegistryName(location("planet_cola")));
         registry.register(SOUP_OF_SINKING = new SoupOfSinkingItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.SOUP_OF_SINKING)).setRegistryName(location("soup_of_sinking")));
         registry.register(HARDENED_OATMEAL_COOKIE = new GiveEffectItem(() -> ConsumablesAndCharmsEffects.SHOCKWAVE, 100, 0, false, true, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.HARDENED_OATMEAL_COOKIE)).setRegistryName(location("hardened_oatmeal_cookie")));
         registry.register(MATRON_MOTHER_MEATBALL = new MatronMotherMeatballItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("matron_mother_meatball")));
         registry.register(COMFORT_CHILI = new ComfortChiliItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.COMFORT_CHILI)).setRegistryName(location("comfort_chili")));
         //registry.register(CHORUS_FRUIT_JUICE = new ChorusFruitJuice(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.CHORUS_FRUIT_JUICE)).setRegistryName(location("chorus_fruit_juice")));
+        registry.register(SOARING_STEW = new GiveEffectItem(() -> ConsumablesAndCharmsEffects.SOARING, 600, 0, false, true, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.SOARING_STEW)).setRegistryName(location("soaring_stew")));
         
         //Ingredients
         registry.register(HELL_MEAT = new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("hell_meat")));
