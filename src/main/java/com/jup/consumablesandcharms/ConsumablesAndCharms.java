@@ -4,6 +4,7 @@ import com.jup.consumablesandcharms.blocks.ConsumablesAndCharmsBlocks;
 import com.jup.consumablesandcharms.client.ClientProxy;
 import com.jup.consumablesandcharms.items.ConsumablesAndCharmsItems;
 import com.jup.consumablesandcharms.potions.ConsumablesAndCharmsEffects;
+import com.jup.consumablesandcharms.world.features.ConsumablesAndCharmsFeatures;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Effect;
@@ -42,6 +43,7 @@ public class ConsumablesAndCharms
 
     private void setup(final FMLCommonSetupEvent event)
     {
+        //ConsumablesAndCharmsFeatures.gen();
     }
 
     private void doClientStuff(final FMLClientSetupEvent event)

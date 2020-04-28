@@ -24,6 +24,7 @@ public class ConsumablesAndCharmsItems
     public static Item HARDENED_OATMEAL_COOKIE;
     public static Item MATRON_MOTHER_MEATBALL;
     public static Item COMFORT_CHILI;
+    public static Item CHORUS_FRUIT_JUICE;
     
     public static Item HELL_MEAT;
     public static Item FOREST_SALT;
@@ -53,6 +54,7 @@ public class ConsumablesAndCharmsItems
         registry.register(HARDENED_OATMEAL_COOKIE = new GiveEffectItem(() -> ConsumablesAndCharmsEffects.SHOCKWAVE, 100, 0, false, true, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.HARDENED_OATMEAL_COOKIE)).setRegistryName(location("hardened_oatmeal_cookie")));
         registry.register(MATRON_MOTHER_MEATBALL = new MatronMotherMeatballItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("matron_mother_meatball")));
         registry.register(COMFORT_CHILI = new ComfortChiliItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.COMFORT_CHILI)).setRegistryName(location("comfort_chili")));
+        //registry.register(CHORUS_FRUIT_JUICE = new ChorusFruitJuice(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.CHORUS_FRUIT_JUICE)).setRegistryName(location("chorus_fruit_juice")));
         
         //Ingredients
         registry.register(HELL_MEAT = new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("hell_meat")));
@@ -71,6 +73,7 @@ public class ConsumablesAndCharmsItems
         
         //Blocks
         registerBlockItem(registry, new BlockItem(ARCANOKITCHEN, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)));
+        registerBlockItem(registry, new BlockItem(MOUNTAIN_CACAO, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)));
     }
     
     private static Item registerBlockItem(IForgeRegistry<Item> registry, BlockItem item)

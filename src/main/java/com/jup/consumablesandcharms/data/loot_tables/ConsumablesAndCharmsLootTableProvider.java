@@ -16,15 +16,17 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class ConsumablesAndCharmsLootTableProvider extends LootTableProvider {
-    public ConsumablesAndCharmsLootTableProvider(DataGenerator dataGeneratorIn) {
+public class ConsumablesAndCharmsLootTableProvider extends LootTableProvider
+{
+    public ConsumablesAndCharmsLootTableProvider(DataGenerator dataGeneratorIn)
+    {
         super(dataGeneratorIn);
     }
     
     @Override
     protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootParameterSet>> getTables()
     {
-        return ImmutableList.of(Pair.of(ConsumablesAndCharmsChestLootTables::new, LootParameterSets.CHEST));
+        return ImmutableList.of(Pair.of(ConsumablesAndCharmsChestLootTables::new, LootParameterSets.CHEST), Pair.of(ConsumablesAndCharmsBlockLootTables::new, LootParameterSets.BLOCK));
     }
     
     @Override
