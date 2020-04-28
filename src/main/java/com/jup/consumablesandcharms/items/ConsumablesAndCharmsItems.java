@@ -42,7 +42,7 @@ public class ConsumablesAndCharmsItems
     public static final Item OTHERWORDLY_RESIDUE = null;
     public static final Item SPIRIT_OF_ADVENTURE = null;
     
-    public static Item HELL_STEAK = null;
+    public static final Item HELL_STEAK = null;
     
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
