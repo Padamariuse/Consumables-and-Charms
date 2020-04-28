@@ -43,7 +43,7 @@ public class ConsumablesAndCharms
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        //ConsumablesAndCharmsFeatures.gen();
+        ConsumablesAndCharmsFeatures.gen();
     }
 
     private void doClientStuff(final FMLClientSetupEvent event)

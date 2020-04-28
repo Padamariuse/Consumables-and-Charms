@@ -30,7 +30,7 @@ public class UniqueBlockScatteredPlantFeature extends Feature<NoFeatureConfig>
     {
         int i = 0;
         
-        for(int j = 0; j < 64; ++j) {
+        for(int j = 0; j < 4; ++j) {
             BlockPos blockpos = pos.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
             if (worldIn.isAirBlock(blockpos) && worldIn.getBlockState(blockpos.down()).getBlock() == block) {
                 worldIn.setBlockState(blockpos, this.plant, 2);

@@ -18,11 +18,13 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.ObjectHolder;
 
+@ObjectHolder(ConsumablesAndCharms.MOD_ID)
 @Mod.EventBusSubscriber(modid = ConsumablesAndCharms.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ConsumablesAndCharmsFeatures
 {
-    public static Feature<NoFeatureConfig> MOUNTAIN_CACAO;
+    public static final Feature<NoFeatureConfig> MOUNTAIN_CACAO = null;
     
     @SubscribeEvent
     public static void registerFeatures(RegistryEvent.Register<Feature<?>> event)
