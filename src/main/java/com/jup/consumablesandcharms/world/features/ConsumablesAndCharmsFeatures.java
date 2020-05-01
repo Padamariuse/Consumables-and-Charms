@@ -40,7 +40,7 @@ public class ConsumablesAndCharmsFeatures
         {
             if (BiomeDictionary.getTypes(biome).contains(BiomeDictionary.Type.MOUNTAIN))
             {
-                biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, biome.createDecoratedFeature(MOUNTAIN_CACAO, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP_32, new FrequencyConfig(20)));
+                biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, biome.createDecoratedFeature(MOUNTAIN_CACAO, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP_32, new FrequencyConfig(8)));
             }
         }
     }
