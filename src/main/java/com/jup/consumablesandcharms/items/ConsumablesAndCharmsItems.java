@@ -6,6 +6,7 @@ import com.jup.consumablesandcharms.items.foods.CandycicleItem;
 import com.jup.consumablesandcharms.items.foods.PopchorusItem;
 import com.jup.consumablesandcharms.potions.ConsumablesAndCharmsEffects;
 import net.minecraft.item.*;
+import net.minecraft.potion.Effects;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -30,6 +31,8 @@ public class ConsumablesAndCharmsItems
     public static final Item COMFORT_CHILI = null;
     public static final Item CHORUS_FRUIT_JUICE = null;
     public static final Item SOARING_STEW = null;
+    public static final Item HEART_OF_THE_SUSHI = null;
+    public static final Item MAGNETIC_NACHOS = null;
     
     public static final Item HELL_MEAT = null;
     public static final Item FOREST_SALT = null;
@@ -62,6 +65,8 @@ public class ConsumablesAndCharmsItems
         registry.register(new ComfortChiliItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.COMFORT_CHILI)).setRegistryName(location("comfort_chili")));
         //registry.register(new ChorusFruitJuice(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.CHORUS_FRUIT_JUICE)).setRegistryName(location("chorus_fruit_juice")));
         registry.register(new GiveEffectItem(() -> ConsumablesAndCharmsEffects.SOARING, 600, 0, false, true, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.SOARING_STEW)).setRegistryName(location("soaring_stew")));
+        registry.register(new GiveEffectItem(() -> Effects.CONDUIT_POWER, 700, 0, false, true, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.HEART_OF_THE_SUSHI)).setRegistryName(location("heart_of_the_sushi")));
+        registry.register(new MagnetFoodItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.MAGNETIC_NACHOS)).setRegistryName(location("magnetic_nachos")));
         
         //Ingredients
         registry.register(new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("hell_meat")));

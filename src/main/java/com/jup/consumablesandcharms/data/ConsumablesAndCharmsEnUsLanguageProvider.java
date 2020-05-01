@@ -28,6 +28,8 @@ public class ConsumablesAndCharmsEnUsLanguageProvider extends ConsumablesAndChar
         add(ConsumablesAndCharmsItems.MATRON_MOTHER_MEATBALL, "Matron Mother Meatball");
         add(ConsumablesAndCharmsItems.COMFORT_CHILI, "Comfort Chili");
         add(ConsumablesAndCharmsItems.SOARING_STEW, "Soaring Stew");
+        add(ConsumablesAndCharmsItems.HEART_OF_THE_SUSHI, "Heart of the Sushi");
+        add(ConsumablesAndCharmsItems.MAGNETIC_NACHOS, "Magnetic Nachos");
         add(ConsumablesAndCharmsItems.HELL_MEAT, "Hell Meat");
         add(ConsumablesAndCharmsItems.FOREST_SALT, "Forest Salt");
         add(ConsumablesAndCharmsItems.GLACIER_MINT, "Glaciermint");
