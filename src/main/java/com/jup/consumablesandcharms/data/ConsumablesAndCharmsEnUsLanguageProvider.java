@@ -32,6 +32,7 @@ public class ConsumablesAndCharmsEnUsLanguageProvider extends ConsumablesAndChar
         add(ConsumablesAndCharmsItems.MAGNETIC_NACHOS, "Magnetic Nachos");
         add(ConsumablesAndCharmsItems.DARK_HARVESTED_SALAD, "Dark Harvested Salad");
         add(ConsumablesAndCharmsItems.INFERNO_CELERY, "Inferno Celery");
+        add(ConsumablesAndCharmsItems.CHAOS_FRUIT_GUMMIES, "Chaos Fruit Gummies");
         add(ConsumablesAndCharmsItems.HELL_MEAT, "Hell Meat");
         add(ConsumablesAndCharmsItems.FOREST_SALT, "Forest Salt");
         add(ConsumablesAndCharmsItems.GLACIER_MINT, "Glaciermint");

@@ -55,9 +55,12 @@ public class FoodBaseItem extends Item {
     @Override
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving)
     {
-        if(entityLiving.getRNG().nextFloat() <= 0.01 && entityLiving instanceof PlayerEntity && !worldIn.isRemote)
+        if(entityLiving instanceof PlayerEntity)
         {
-            ((PlayerEntity) entityLiving).addItemStackToInventory(new ItemStack(ConsumablesAndCharmsItems.DIVINE_POWER));
+            if(entityLiving.getRNG().nextFloat() <= 0.01 && !worldIn.isRemote)
+            {
+                ((PlayerEntity) entityLiving).addItemStackToInventory(new ItemStack(ConsumablesAndCharmsItems.DIVINE_POWER));
+            }
         }
         return super.onItemUseFinish(stack, worldIn, entityLiving);
     }

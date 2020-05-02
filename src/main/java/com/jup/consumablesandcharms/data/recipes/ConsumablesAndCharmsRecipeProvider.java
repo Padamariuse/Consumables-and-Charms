@@ -27,6 +27,7 @@ public class ConsumablesAndCharmsRecipeProvider extends RecipeProvider
         cookingRecipesFor(consumer, Ingredient.fromItems(ConsumablesAndCharmsItems.HELL_MEAT), ConsumablesAndCharmsItems.HELL_STEAK, 0.0F, "has_hell_meat", hasItem(ConsumablesAndCharmsItems.HELL_MEAT));
     
         ShapelessRecipeBuilder.shapelessRecipe(ConsumablesAndCharmsItems.EARTHEN_FLOUR, 4).addIngredient(ConsumablesAndCharmsItems.FOREST_SALT, 2).addIngredient(Items.WHEAT, 2).addCriterion("has_wheat", hasItem(Items.WHEAT)).build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ConsumablesAndCharmsItems.DIVINE_POWER, 8).addIngredient(Items.NETHER_STAR, 1).addCriterion("has_nether_star", hasItem(Items.NETHER_STAR)).build(consumer);
     }
     
     private void cookingRecipesFor(Consumer<IFinishedRecipe> recipeBuilder, Ingredient input, IItemProvider result, float experience, String criterionName, InventoryChangeTrigger.Instance criterion)
