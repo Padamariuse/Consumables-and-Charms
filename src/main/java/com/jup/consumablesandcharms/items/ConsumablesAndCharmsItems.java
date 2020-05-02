@@ -33,6 +33,8 @@ public class ConsumablesAndCharmsItems
     public static final Item SOARING_STEW = null;
     public static final Item HEART_OF_THE_SUSHI = null;
     public static final Item MAGNETIC_NACHOS = null;
+    public static final Item DARK_HARVESTED_SALAD = null;
+    public static final Item INFERNO_CELERY = null;
     
     public static final Item HELL_MEAT = null;
     public static final Item FOREST_SALT = null;
@@ -46,6 +48,8 @@ public class ConsumablesAndCharmsItems
     public static final Item SPIRIT_OF_ADVENTURE = null;
     
     public static final Item HELL_STEAK = null;
+    
+    public static final Item MOTE_OF_DEATH = null;
     
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
@@ -63,10 +67,12 @@ public class ConsumablesAndCharmsItems
         registry.register(new GiveEffectItem(() -> ConsumablesAndCharmsEffects.SHOCKWAVE, 100, 0, false, true, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.HARDENED_OATMEAL_COOKIE)).setRegistryName(location("hardened_oatmeal_cookie")));
         registry.register(new MatronMotherMeatballItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("matron_mother_meatball")));
         registry.register(new ComfortChiliItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.COMFORT_CHILI)).setRegistryName(location("comfort_chili")));
-        //registry.register(new ChorusFruitJuice(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.CHORUS_FRUIT_JUICE)).setRegistryName(location("chorus_fruit_juice")));
+        //registry.register(new ChorusFruitJuice(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.CHORUS_FRUIT_JUICE)).setRegistryName(location("chorus_fruit_juice"))); /* this item sucks */
         registry.register(new GiveEffectItem(() -> ConsumablesAndCharmsEffects.SOARING, 600, 0, false, true, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.SOARING_STEW)).setRegistryName(location("soaring_stew")));
         registry.register(new GiveEffectItem(() -> Effects.CONDUIT_POWER, 700, 0, false, true, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.HEART_OF_THE_SUSHI)).setRegistryName(location("heart_of_the_sushi")));
         registry.register(new MagnetFoodItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.MAGNETIC_NACHOS)).setRegistryName(location("magnetic_nachos")));
+        registry.register(new DeathHarvestItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.DARK_HARVESTED_SALAD)).setRegistryName(location("dark_harvested_salad")));
+        registry.register(new InfernoItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.INFERNO_CELERY)).setRegistryName(location("inferno_celery")));
         
         //Ingredients
         registry.register(new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("hell_meat")));
@@ -82,6 +88,9 @@ public class ConsumablesAndCharmsItems
         
         //Food
         registry.register(new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName("hell_steak"));
+        
+        //Misc
+        registry.register(new MoteOfDeathItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName("mote_of_death"));
         
         //Blocks
         registerBlockItem(registry, new BlockItem(ARCANOKITCHEN, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)));

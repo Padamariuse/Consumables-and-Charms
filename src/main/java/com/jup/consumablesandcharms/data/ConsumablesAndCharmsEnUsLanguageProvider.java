@@ -30,6 +30,8 @@ public class ConsumablesAndCharmsEnUsLanguageProvider extends ConsumablesAndChar
         add(ConsumablesAndCharmsItems.SOARING_STEW, "Soaring Stew");
         add(ConsumablesAndCharmsItems.HEART_OF_THE_SUSHI, "Heart of the Sushi");
         add(ConsumablesAndCharmsItems.MAGNETIC_NACHOS, "Magnetic Nachos");
+        add(ConsumablesAndCharmsItems.DARK_HARVESTED_SALAD, "Dark Harvested Salad");
+        add(ConsumablesAndCharmsItems.INFERNO_CELERY, "Inferno Celery");
         add(ConsumablesAndCharmsItems.HELL_MEAT, "Hell Meat");
         add(ConsumablesAndCharmsItems.FOREST_SALT, "Forest Salt");
         add(ConsumablesAndCharmsItems.GLACIER_MINT, "Glaciermint");
@@ -41,6 +43,7 @@ public class ConsumablesAndCharmsEnUsLanguageProvider extends ConsumablesAndChar
         add(ConsumablesAndCharmsItems.OTHERWORDLY_RESIDUE, "Otherwordly Residue");
         add(ConsumablesAndCharmsItems.SPIRIT_OF_ADVENTURE, "Spirit of Adventure");
         add(ConsumablesAndCharmsItems.HELL_STEAK, "Hell Steak");
+        add(ConsumablesAndCharmsItems.MOTE_OF_DEATH, "Mote of Death");
         
         add(ConsumablesAndCharmsBlocks.ARCANOKITCHEN, "Arcanokitchen");
         add(ConsumablesAndCharmsBlocks.MOUNTAIN_CACAO, "Mountain Cacao");
@@ -48,6 +51,7 @@ public class ConsumablesAndCharmsEnUsLanguageProvider extends ConsumablesAndChar
         add(ConsumablesAndCharmsEffects.ENDER_DISTORTION, "Ender Distortion");
         add(ConsumablesAndCharmsEffects.SHOCKWAVE, "Shockwave");
         add(ConsumablesAndCharmsEffects.SOARING, "Soaring");
+        add(ConsumablesAndCharmsEffects.INFERNO, "Inferno");
     
         add(ConsumablesAndCharmsItemGroup.MAIN, "Consumables and Charms");
     }

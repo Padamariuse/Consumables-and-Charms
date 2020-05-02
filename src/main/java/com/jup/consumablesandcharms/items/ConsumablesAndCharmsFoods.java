@@ -17,6 +17,8 @@ public class ConsumablesAndCharmsFoods
     public static final Food SOARING_STEW = (new Food.Builder()).hunger(10).saturation(0.7F).build();
     public static final Food HEART_OF_THE_SUSHI = (new Food.Builder()).hunger(5).saturation(0.4F).build();
     public static final Food MAGNETIC_NACHOS = (new Food.Builder()).hunger(2).saturation(0.2F).build();
+    public static final Food DARK_HARVESTED_SALAD = (new Food.Builder()).hunger(6).saturation(0.5F).build();
+    public static final Food INFERNO_CELERY = (new Food.Builder()).hunger(3).saturation(0.4F).build();
     
     public static final Food HELL_STEAK = (new Food.Builder()).hunger(8).saturation(0.6F).build();
 }
