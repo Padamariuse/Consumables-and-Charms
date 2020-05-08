@@ -34,10 +34,10 @@ public class GunpowderGanacheCakeItem extends FoodBaseItem
                     if (listEntity instanceof CreeperEntity)
                     {
                         ((CreeperEntity) listEntity).ignite();
-                    } else if (getTier(stack) > 1 && !listEntity.world.isRemote())
+                    } else if (getPowerMod(stack, entityLiving) > 1 && !listEntity.world.isRemote())
                     {
                         float listEntityMaxHealth = ((LivingEntity) listEntity).getMaxHealth();
-                        if (listEntityMaxHealth < (getTier(stack) * 5) - 5)
+                        if (listEntityMaxHealth < (getPowerMod(stack, entityLiving) * 5) - 5)
                         {
                             listEntity.world.createExplosion(listEntity, listEntity.posX, listEntity.posY, listEntity.posZ, 1.0F, Explosion.Mode.DESTROY);
                             listEntity.attackEntityFrom(DamageSource.GENERIC, listEntityMaxHealth);

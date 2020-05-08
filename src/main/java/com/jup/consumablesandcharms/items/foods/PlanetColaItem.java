@@ -28,7 +28,7 @@ public class PlanetColaItem extends FoodBaseItem
                 if(listEntity instanceof LivingEntity)
                 {
                     Vec3d vec = entityLiving.getLookVec().normalize();
-                    double f = getTier(stack) * 0.65;
+                    double f = getPowerMod(stack, entityLiving) * 0.65;
     
                     listEntity.addVelocity(vec.x * f, vec.y * f, vec.z * f);
                 }

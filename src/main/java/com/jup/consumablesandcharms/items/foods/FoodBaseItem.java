@@ -1,11 +1,13 @@
 package com.jup.consumablesandcharms.items.foods;
 
 import com.jup.consumablesandcharms.items.ConsumablesAndCharmsItems;
+import com.jup.consumablesandcharms.potions.ConsumablesAndCharmsEffects;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.EffectInstance;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.Style;
@@ -19,6 +21,21 @@ public class FoodBaseItem extends Item {
     public FoodBaseItem(Properties properties)
     {
         super(properties);
+    }
+    
+    
+    //Use this method to make effects which scale with an item's power.
+    public static int getPowerMod(ItemStack stack, LivingEntity player)
+    {
+        int power = getTier(stack);
+        
+        if(player.isPotionActive(ConsumablesAndCharmsEffects.TASTE_OF_POWER))
+        {
+            EffectInstance potion = player.getActivePotionEffect(ConsumablesAndCharmsEffects.TASTE_OF_POWER);
+            power = power + 2 + ((int)(Math.floor(potion.getAmplifier() * .4)));
+        }
+        
+        return power;
     }
     
     public static int getTier(ItemStack stack)

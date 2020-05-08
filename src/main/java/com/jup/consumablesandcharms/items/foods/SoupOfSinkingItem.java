@@ -49,7 +49,7 @@ public class SoupOfSinkingItem extends FoodBaseItem
     
                 WitherEntity testingWither = new WitherEntity(EntityType.WITHER, world);
                 
-                for(int a = 0; a < 2+getTier(stack) && b.getBlock().canEntityDestroy(b, world, blockpos, testingWither); a++)
+                for(int a = 0; a < 2+getPowerMod(stack, entity) && b.getBlock().canEntityDestroy(b, world, blockpos, testingWither); a++)
                 {
                     x = listEntity.posX;
                     y = listEntity.posY;

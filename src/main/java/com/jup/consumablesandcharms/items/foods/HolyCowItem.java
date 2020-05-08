@@ -32,10 +32,10 @@ public class HolyCowItem extends FoodBaseItem
                         strikeWithLightning(worldIn, listEntity);
                         listEntity.attackEntityFrom(DamageSource.LIGHTNING_BOLT, 50.0F);
                     }
-                    else if(getTier(stack) > 1 && !listEntity.world.isRemote())
+                    else if(getPowerMod(stack, entityLiving) > 1 && !listEntity.world.isRemote())
                     {
                         strikeWithLightning(worldIn, listEntity);
-                        listEntity.attackEntityFrom(DamageSource.LIGHTNING_BOLT, 5.0F * getTier(stack));
+                        listEntity.attackEntityFrom(DamageSource.LIGHTNING_BOLT, 5.0F * getPowerMod(stack, entityLiving));
                     }
                 }
             }

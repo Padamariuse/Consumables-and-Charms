@@ -22,7 +22,7 @@ public class MagnetFoodItem extends FoodBaseItem
     {
         if(entityLiving instanceof PlayerEntity)
         {
-            int bbmod = (getTier(stack)-1) * 5;
+            int bbmod = (getPowerMod(stack, entityLiving)-1) * 5;
             List<Entity> entities = entityLiving.world.getEntitiesWithinAABBExcludingEntity(entityLiving, entityLiving.getBoundingBox().expand(15 + bbmod, 15.0D + bbmod, -15.0D - bbmod).offset(-7.5 - (bbmod / 2), -7.5 - (bbmod / 2), 7.5 + (bbmod / 2)));
             for(int i = 0; entities.size() > i; i++)
             {

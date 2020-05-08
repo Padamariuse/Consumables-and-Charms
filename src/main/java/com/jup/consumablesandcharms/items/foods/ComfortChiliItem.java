@@ -26,8 +26,8 @@ public class ComfortChiliItem extends FoodBaseItem
                 entityLiving.setPositionAndUpdate(pos.getX(), pos.getY() + 1, pos.getZ());
                 if(!worldIn.isRemote)
                 {
-                    entityLiving.addPotionEffect(new EffectInstance(Effects.ABSORPTION, 400 + (getTier(stack) * 100), getTier(stack) - 1));
-                    entityLiving.addPotionEffect(new EffectInstance(Effects.REGENERATION, 400 + (getTier(stack) * 100), Math.floorDiv(getTier(stack), 4)));
+                    entityLiving.addPotionEffect(new EffectInstance(Effects.ABSORPTION, 400 + (getPowerMod(stack, entityLiving) * 100), getPowerMod(stack, entityLiving) - 1));
+                    entityLiving.addPotionEffect(new EffectInstance(Effects.REGENERATION, 400 + (getPowerMod(stack, entityLiving) * 100), Math.floorDiv(getPowerMod(stack, entityLiving), 4)));
                 }
             }
             else

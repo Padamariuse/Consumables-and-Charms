@@ -26,7 +26,7 @@ public class PopchorusItem extends FoodBaseItem
             Entity listEntity = entities.get(i);
             if(listEntity instanceof LivingEntity)
             {
-                ((LivingEntity) listEntity).addPotionEffect(new EffectInstance(ConsumablesAndCharmsEffects.ENDER_DISTORTION, 60, 0 + getTier(stack)));
+                ((LivingEntity) listEntity).addPotionEffect(new EffectInstance(ConsumablesAndCharmsEffects.ENDER_DISTORTION, 60, 0 + getPowerMod(stack, entityLiving)));
             }
         }
         return super.onItemUseFinish(stack, worldIn, entityLiving);

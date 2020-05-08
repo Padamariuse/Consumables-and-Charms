@@ -31,7 +31,7 @@ public class DeathHarvestItem extends FoodBaseItem
                 Entity listEntity = entities.get(i);
                 if(listEntity instanceof LivingEntity)
                 {
-                    double damagemod = 4.0 + getTier(stack);
+                    double damagemod = 4.0 + getPowerMod(stack, entityLiving);
                     if(damagemod > 10 )
                         damagemod = 10;
                     listEntity.attackEntityFrom(DamageSource.MAGIC, ((float)damagemod));
@@ -40,7 +40,7 @@ public class DeathHarvestItem extends FoodBaseItem
                     {
                         ItemStack mote = new ItemStack(ConsumablesAndCharmsItems.MOTE_OF_DEATH, 1);
                         CompoundNBT nbt = mote.getOrCreateTag();
-                        nbt.putInt("tier", getTier(stack));
+                        nbt.putInt("tier", getPowerMod(stack, entityLiving));
                         
                         ((PlayerEntity) entityLiving).addItemStackToInventory(mote);
                     }

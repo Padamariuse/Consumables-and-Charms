@@ -5,6 +5,7 @@
   "effect.consumablesandcharms.inferno": "Inferno",
   "effect.consumablesandcharms.shockwave": "Shockwave",
   "effect.consumablesandcharms.soaring": "Soaring",
+  "effect.consumablesandcharms.taste_of_power": "Taste of Power",
   "item.consumablesandcharms.bated_breath": "Bated Breath",
   "item.consumablesandcharms.candycicle": "Candycicle",
   "item.consumablesandcharms.chaos_fruit_gummies": "Chaos Fruit Gummies",
@@ -32,6 +33,7 @@
   "item.consumablesandcharms.soup_of_sinking": "Soup of Sinking",
   "item.consumablesandcharms.spirit_of_adventure": "Spirit of Adventure",
   "item.consumablesandcharms.stone_cacao": "Stone Cacao",
+  "item.consumablesandcharms.taste_of_power": "Taste of Power",
   "item.consumablesandcharms.witching_powder": "Witching Powder",
   "itemGroup.consumablesandcharms": "Consumables and Charms"
 }

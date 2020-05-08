@@ -34,7 +34,7 @@ public class MatronMotherMeatballItem extends FoodBaseItem
     
         if(!worldIn.isRemote)
         {
-            MatronMotherMeatballEntity meatball = new MatronMotherMeatballEntity(ConsumablesAndCharmsEntityTypes.MATRON_MOTHER_MEATBALL, playerIn, worldIn, getTier(playerIn.getHeldItem(handIn)));
+            MatronMotherMeatballEntity meatball = new MatronMotherMeatballEntity(ConsumablesAndCharmsEntityTypes.MATRON_MOTHER_MEATBALL, playerIn, worldIn, getPowerMod(playerIn.getHeldItem(handIn), playerIn));
             meatball.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 2.25F, 1.0F);
             worldIn.addEntity(meatball);
         }

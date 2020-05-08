@@ -55,7 +55,7 @@ public class ChaosItem extends FoodBaseItem
         if(entityLiving instanceof PlayerEntity && !worldIn.isRemote)
         {
             EffectInstance e = new EffectInstance(effect[entityLiving.getRNG().nextInt(effect.length)]);
-            for(int i = 0; entityLiving.getRNG().nextFloat() < .15F && getTier(stack) > i && !e.getPotion().isBeneficial(); i++)
+            for(int i = 0; entityLiving.getRNG().nextFloat() < .15F && getPowerMod(stack, entityLiving) > i && !e.getPotion().isBeneficial(); i++)
             {
                 e = new EffectInstance(effect[entityLiving.getRNG().nextInt(effect.length)]);
             }

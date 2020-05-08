@@ -29,8 +29,8 @@ public class InfernoItem extends FoodBaseItem
         {
             if(!world.isRemote)
             {
-                entity.addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, 140 + (60 * getTier(stack)), 0));
-                entity.addPotionEffect(new EffectInstance(ConsumablesAndCharmsEffects.INFERNO, 240 + (60 * getTier(stack)), getTier(stack)-1));
+                entity.addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, 140 + (60 * getPowerMod(stack, entity)), 0));
+                entity.addPotionEffect(new EffectInstance(ConsumablesAndCharmsEffects.INFERNO, 240 + (60 * getPowerMod(stack, entity)), getPowerMod(stack, entity)-1));
             }
     
             for(int i = 0; i < entity.getRNG().nextInt(30) + 55; i++)
@@ -38,14 +38,14 @@ public class InfernoItem extends FoodBaseItem
             
             world.playSound(entity.posX, entity.posY, entity.posZ, SoundEvents.ENTITY_WITHER_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F, true);
             
-            int bbmod = (getTier(stack)-1) * 5;
+            int bbmod = (getPowerMod(stack, entity)-1) * 5;
             List<Entity> entities = entity.world.getEntitiesWithinAABBExcludingEntity(entity, entity.getBoundingBox().expand(15 + bbmod, 15.0D + bbmod, -15.0D - bbmod).offset(-7.5 - (bbmod / 2), -7.5 - (bbmod / 2), 7.5 + (bbmod / 2)));
             for(int i = 0; entities.size() > i; i++)
             {
                 Entity listEntity = entities.get(i);
                 if(listEntity instanceof LivingEntity)
                 {
-                    listEntity.setFire(5 + getTier(stack));
+                    listEntity.setFire(5 + getPowerMod(stack, entity));
                 }
             }
         }

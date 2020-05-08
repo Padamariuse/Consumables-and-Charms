@@ -33,7 +33,7 @@ public class CandycicleItem extends FoodBaseItem
                 Entity listEntity = entities.get(i);
                 if(listEntity instanceof LivingEntity && !listEntity.world.isRemote())
                 {
-                    ((LivingEntity) listEntity).addPotionEffect(new EffectInstance(SLOWNESS, 300, getTier(stack)));
+                    ((LivingEntity) listEntity).addPotionEffect(new EffectInstance(SLOWNESS, 300, getPowerMod(stack, e)));
                     listEntity.playSound(BLOCK_GLASS_BREAK, 100, 1);
                     listEntity.world.addParticle(new BlockParticleData(ParticleTypes.BLOCK, Blocks.ICE.getDefaultState()), listEntity.posX, listEntity.posY, listEntity.posZ, 0.0D, 0.0D, 0.0D);
                 }

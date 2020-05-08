@@ -17,7 +17,7 @@ public class ChorusFruitJuice extends FoodBaseItem
     @Override
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving)
     {
-        entityLiving.addPotionEffect(new EffectInstance(ConsumablesAndCharmsEffects.ENDER_DISTORTION, 200, 1-getTier(stack)));
+        entityLiving.addPotionEffect(new EffectInstance(ConsumablesAndCharmsEffects.ENDER_DISTORTION, 200, 1-getPowerMod(stack, entityLiving)));
         return super.onItemUseFinish(stack, worldIn, entityLiving);
     }
     
