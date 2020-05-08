@@ -49,17 +49,7 @@ public class MoteOfDeathItem extends Item
         
         ITextComponent message = new StringTextComponent("On use, grants Strength " + tier);
         Style s = message.getStyle();
-        
-        if(tier >= 15)
-        {
-            s.setColor(TextFormatting.LIGHT_PURPLE);
-        } else if(tier >= 10)
-        {
-            s.setColor(TextFormatting.AQUA);
-        } else if(tier >= 5)
-        {
-            s.setColor(TextFormatting.YELLOW);
-        }
+        s.setColor(TextFormatting.GRAY);
         
         tooltip.add(message);
         super.addInformation(stack, worldIn, tooltip, flagIn);
