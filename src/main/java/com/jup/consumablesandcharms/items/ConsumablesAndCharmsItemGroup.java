@@ -4,12 +4,13 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.registries.ObjectHolder;
 
 import java.util.function.Supplier;
 
 public class ConsumablesAndCharmsItemGroup extends ItemGroup
 {
-    public static final ItemGroup MAIN = new ConsumablesAndCharmsItemGroup("consumablesandcharms", () -> new ItemStack(ConsumablesAndCharmsItems.CANDYCICLE));
+    public static final ItemGroup MAIN = new ConsumablesAndCharmsItemGroup("consumablesandcharms", () -> new ItemStack(ConsumablesAndCharmsItems.TASTE_OF_POWER));
     
     private final Supplier<ItemStack> icon;
     

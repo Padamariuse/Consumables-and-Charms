@@ -34,6 +34,7 @@ public class ConsumablesAndCharmsEnUsLanguageProvider extends ConsumablesAndChar
         add(ConsumablesAndCharmsItems.INFERNO_CELERY, "Inferno Celery");
         add(ConsumablesAndCharmsItems.CHAOS_FRUIT_GUMMIES, "Chaos Fruit Gummies");
         add(ConsumablesAndCharmsItems.TASTE_OF_POWER, "Taste of Power");
+        add(ConsumablesAndCharmsItems.CLOCK_TACO, "Clocko, the Clockwork Taco");
         add(ConsumablesAndCharmsItems.HELL_MEAT, "Hell Meat");
         add(ConsumablesAndCharmsItems.FOREST_SALT, "Forest Salt");
         add(ConsumablesAndCharmsItems.GLACIER_MINT, "Glaciermint");
@@ -55,7 +56,7 @@ public class ConsumablesAndCharmsEnUsLanguageProvider extends ConsumablesAndChar
         add(ConsumablesAndCharmsEffects.SOARING, "Soaring");
         add(ConsumablesAndCharmsEffects.INFERNO, "Inferno");
         add(ConsumablesAndCharmsEffects.TASTE_OF_POWER, "Taste of Power");
-    
+        
         add(ConsumablesAndCharmsItemGroup.MAIN, "Consumables and Charms");
     }
 }

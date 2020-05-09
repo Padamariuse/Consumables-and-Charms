@@ -18,7 +18,6 @@ import javax.annotation.Nonnull;
 @Mod.EventBusSubscriber(modid = ConsumablesAndCharms.MOD_ID, bus=Mod.EventBusSubscriber.Bus.MOD)
 public final class ConsumablesAndCharmsEntityTypes
 {
-    public static final EntityType<RisenSkeletonEntity> RISEN_SKELETON = getNull();
     public static final EntityType<MatronMotherMeatballEntity> MATRON_MOTHER_MEATBALL= getNull();
     
     @Nonnull
@@ -32,7 +31,6 @@ public final class ConsumablesAndCharmsEntityTypes
     {
         IForgeRegistry<EntityType<?>> registry = event.getRegistry();
         
-        register(registry, EntityType.Builder.<RisenSkeletonEntity>create(RisenSkeletonEntity::new, EntityClassification.MONSTER).size(0.51F, 0.51F), "risen_skeleton");
         register(registry, EntityType.Builder.<MatronMotherMeatballEntity>create(MatronMotherMeatballEntity::new, EntityClassification.MISC), "matron_mother_meatball");
     }
     

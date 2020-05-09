@@ -10,7 +10,6 @@ import net.minecraft.potion.Effects;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -37,6 +36,7 @@ public class ConsumablesAndCharmsItems
     public static final Item INFERNO_CELERY = null;
     public static final Item CHAOS_FRUIT_GUMMIES = null;
     public static final Item TASTE_OF_POWER = null;
+    public static final Item CLOCK_TACO = null;
     
     public static final Item HELL_MEAT = null;
     public static final Item FOREST_SALT = null;
@@ -77,6 +77,7 @@ public class ConsumablesAndCharmsItems
         registry.register(new InfernoItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.INFERNO_CELERY)).setRegistryName(location("inferno_celery")));
         registry.register(new ChaosItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.CHAOS_FRUIT_GUMMIES)).setRegistryName(location("chaos_fruit_gummies")));
         registry.register(new GiveEffectItem(() -> ConsumablesAndCharmsEffects.TASTE_OF_POWER, 200, 0, true, true, new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.TASTE_OF_POWER)).setRegistryName(location("taste_of_power")));
+        registry.register(new ClockTacoItem(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN).food(ConsumablesAndCharmsFoods.CLOCK_TACO)).setRegistryName(location("clock_taco")));
         
         //Ingredients
         registry.register(new Item(new Item.Properties().group(ConsumablesAndCharmsItemGroup.MAIN)).setRegistryName(location("hell_meat")));

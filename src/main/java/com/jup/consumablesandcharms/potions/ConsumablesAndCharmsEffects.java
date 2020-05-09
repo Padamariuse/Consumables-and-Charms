@@ -1,10 +1,7 @@
 package com.jup.consumablesandcharms.potions;
 
 import com.jup.consumablesandcharms.ConsumablesAndCharms;
-import com.jup.consumablesandcharms.potions.effects.BaseEffect;
-import com.jup.consumablesandcharms.potions.effects.EnderDistortionEffect;
-import com.jup.consumablesandcharms.potions.effects.InfernoEffect;
-import com.jup.consumablesandcharms.potions.effects.ShockwaveEffect;
+import com.jup.consumablesandcharms.potions.effects.*;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.EffectType;
